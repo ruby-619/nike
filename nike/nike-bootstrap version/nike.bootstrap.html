@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+    <title>Nike.bootstrap</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container-fluid {
+            background-color: #f5f5f5;
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .icon-jordan {
+            width: 25px;
+            height: 25px;
+        }
+
+        .top-right {
+            font-size: 12px;
+        }
+
+        .top-left {
+            padding: 3px 38px 3px 36px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .logo {
+            padding-left: 45px;
+        }
+
+        .title {
+            padding-left: 100px;
+        }
+
+        ul {
+            display: flex;
+            margin: -16px;
+        }
+
+        li {
+            list-style-type: none;
+            /* padding:0px 12px; */
+            padding: 16px 12px 18px;
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+            padding: 0px 38px 0px 36px;
+        }
+
+        .icon-search,
+        .icon-heart,
+        .icon-shopping-bag {
+            width: 24px;
+            height: 24px;
+            padding: 6px;
+            margin-left: 20px;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+            width: 180px;
+            height: 40px;
+            background-color: #f5f5f5;
+            border-radius: 20px;
+        }
+
+        .discount p {
+            margin: 0 auto;
+            text-align: center;
+            padding: 5px;
+        }
+
+        /* 左右留白內縮,主內容 */
+        /* .container{
+            width: 90%;
+        } */
+        .text {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 60px 0 20px 0;
+        }
+
+        .section1pic1 img,
+        .section1pic2 img,
+        .section2pic img,
+        .section3pic1 img,
+        .section3pic2 img,
+        .section3pic3 img,
+        .section4pic1 img,
+        .section4pic2 img,
+        .section4pic3 img {
+            width: 100%;
+        }
+
+        .section1pic1,
+        .section1pic2 {
+            position: relative;
+        }
+
+        .description1,
+        .description2 {
+            position: absolute;
+            bottom: 30px;
+            left: 40px;
+            color: #fff;
+        }
+
+        .section4pic1,
+        .section4pic2,
+        .section4pic3 {
+            position: relative;
+        }
+
+        .btn1,
+        .btn2,
+        .btn3 {
+            position: absolute;
+            bottom: 30px;
+            left: 40px;
+        }
+
+
+
+        .btn {
+            margin-top: 10px;
+            width: 80px;
+            border-radius: 50px;
+            background-color: #fff;
+        }
+
+
+
+        .section1,
+        .section3,
+        .section4,
+        .footer {
+            display: flex;
+        }
+
+
+        .section5 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .section5 li {
+            color: #757575;
+            font-size: 16px;
+            padding: 12px 0px 0px;
+        }
+
+        .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 40px;
+            justify-content: space-around;
+        }
+
+        h6 {
+            font-size: 14px;
+        }
+
+        .footer li,
+        .bottom-right li {
+            font-size: 12px;
+            color: #7E7E7E;
+        }
+
+        .socialmedia {
+            display: flex;
+        }
+
+        .tt,
+        .yt,
+        .ig,
+        .fb {
+            height: 30px;
+            width: 30px;
+            margin: 10px;
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255, .5);
+        }
+
+        .icon-twitter,
+        .icon-youtube,
+        .icon-facebook,
+        .icon-instagram {
+            width: 30px;
+            height: 30px;
+            padding: 8px 0 0 8px;
+        }
+
+        .icon-location {
+            width: 15px;
+            height: 15px;
+            margin: 10px;
+        }
+
+        .copyright {
+            display: flex;
+            font-size: 12px;
+
+        }
+
+        .taiwan {
+            padding-right: 10px;
+        }
+
+        .copyright {
+            margin-bottom: 0px;
+        }
+
+        .bottom {
+            display: flex;
+            background-color: #000;
+            color: #fff;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .bottom-right {
+            display: flex;
+        }
+
+        @media (min-width: 1400px) {
+
+            .container-xxl,
+            .container-xl,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container {
+                max-width: 1800px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="top">
+                <div class="top-left">
+                    <svg class="icon-jordan">
+                        <use xlink:href="symbol-defs.svg#icon-jordan"></use>
+                    </svg>
+                </div>
+                <div class="top-right">
+                    <div>說明｜加入我們｜登入</div>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="logo">
+                    <svg class="pre-logo-svg" height="60px" width="60px" fill="#111" viewBox="0 0 69 32">
+                        <path
+                            d="M68.56 4L18.4 25.36Q12.16 28 7.92 28q-4.8 0-6.96-3.36-1.36-2.16-.8-5.48t2.96-7.08q2-3.04 6.56-8-1.6 2.56-2.24 5.28-1.2 5.12 2.16 7.52Q11.2 18 14 18q2.24 0 5.04-.72z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="title d-none d-xl-block">
+                    <ul>
+                        <li>男款</li>
+                        <li>女款</li>
+                        <li>兒童款</li>
+                        <li>專屬訂製</li>
+                        <li>特惠商品</li>
+                        <li>SNKRS</li>
+                    </ul>
+                </div>
+                <div class="icons">
+                    <div class="search">
+                        <svg class="icon-search">
+                            <use xlink:href="symbol-defs.svg#icon-search"></use>
+                        </svg>
+                    </div>
+                    <svg class="icon-heart">
+                        <use xlink:href="symbol-defs.svg#icon-heart"></use>
+                    </svg>
+                    <svg class="icon-shopping-bag">
+                        <use xlink:href="symbol-defs.svg#icon-shopping-bag"></use>
+                    </svg>
+
+                </div>
+            </div>
+            <div class="discount">
+                <p style="font-size: 14px;">所有訂單皆可享免費標準運送</p>
+                <p style="font-size: 12px;">限時優惠</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- 主要內容 -->
+    <div class="container">
+        <div class="row">
+            <img src="images/nike-官方商店.jpg" alt="">
+            <!-- section1 -->
+            <div class="text section1">流行趨勢</div>
+            <div class="container">
+                <div class="row">
+
+                    <div class="section1pic1 col-12 col-sm mb-3 mb-sm-0">
+                        <img src="images/nike- (1).jpg" alt="">
+                        <div class="description1">
+                            <h5>Air Max Pre-Day: Liquid Lime</h5>
+                            <button type="button" class="btn btn-light">選購</button>
+                        </div>
+                    </div>
+                    <div class="section1pic2  col-12 col-sm">
+                        <img src="images/nike- (2).jpg" alt="">
+                        <div class="description2">
+                            <h5>Nike Yoga 系列</h5>
+                            <button type="button" class="btn btn-light">選購</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- section2 -->
+        <div class="text section2">精選</div>
+        <div class="section2 pic">
+            <div class="section2pic">
+                <img src="images/nike-官方商店 (2).jpg" alt="">
+            </div>
+        </div>
+        <!-- section3 -->
+        <div class="text section3">Air Max 佳選</div>
+
+        <div class="container">
+            <div class="row">
+                <div class="section3pic1 col-12 col-md mb-3">
+                    <img src="images/air-max-90-eoi-男-375pjQ.jpg " alt="">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5>Nike Air Max 90 EOI</h5>
+                        <p>$4,000</p>
+                    </div>
+                    <p>男鞋</p>
+                </div>
+                <div class="section3pic2 col-12 col-md mb-3">
+                    <img src="images/air-max-90-DxngKX.jpg" alt="">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5>Nike Air Max 90</h5>
+                        <p>$3,800</p>
+                    </div>
+                    <p>女鞋</p>
+                </div>
+                <div class="section3pic3 col-12 col-md">
+                    <img src="images/air-max-95-男-jbmQ47.jpg" alt="">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5>Nike Air Max 95</h5>
+                        <p>$5,800</p>
+                    </div>
+                    <p>男鞋</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- section4 -->
+        <div class="text section4">更多 Nike 產品</div>
+
+        <div class="container">
+            <div class="row">
+                <div class="section4pic1 col-12 col-md mb-3">
+                    <img src="images/nike- (3).jpg" alt="">
+                    <button type="button" class="btn btn-light btn1">男款</button>
+                </div>
+                <div class="section4pic2 col-12 col-md mb-3">
+                    <img src="images/nike- (4).jpg" alt="">
+                    <button type="button" class="btn btn-light btn2">女款</button>
+                </div>
+                <div class="section4pic3 col-12 col-md mb-3">
+                    <img src="images/nike- (5).jpg" alt="">
+                    <button type="button" class="btn btn-light btn3">兒童款</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- section5 -->
+        <div class="text section5 flex-column flex-sm-row">
+            <div class="items1">
+                <h5>經典款</h5>
+                <li class="d-none d-sm-block">Air Force 1</li>
+                <li class="d-none d-sm-block">Huarache</li>
+                <li class="d-none d-sm-block">Air Max 90</li>
+                <li class="d-none d-sm-block">Air Max 95</li>
+            </div>
+            <div class="items2">
+                <h5>鞋款</h5>
+                <li class="d-none d-sm-block">所有鞋款</li>
+                <li class="d-none d-sm-block">專屬訂製鞋款</li>
+                <li class="d-none d-sm-block">Jordan 鞋款</li>
+                <li class="d-none d-sm-block">跑鞋</li>
+            </div>
+            <div class="items3">
+                <h5>服裝</h5>
+                <li class="d-none d-sm-block">所有服裝</li>
+                <li class="d-none d-sm-block">合宜穿著</li>
+                <li class="d-none d-sm-block">連帽上衣與套頭上衣</li>
+                <li class="d-none d-sm-block">T恤與上衣</li>
+            </div>
+            <div class="items4">
+                <h5>兒童款</h5>
+                <li class="d-none d-sm-block">嬰幼兒鞋款</li>
+                <li class="d-none d-sm-block">兒童鞋款</li>
+                <li class="d-none d-sm-block">兒童Jordan</li>
+                <li class="d-none d-sm-block">兒童籃球鞋</li>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- footer -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="footer flex-column flex-sm-row">
+                <!-- 手機板直行排列，sm:576px以上，row排列 -->
+                <div class="searchstore">
+                    <h6>尋找商店</h6>
+                    <h6>加入會員</h6>
+                    <h6>訂閱最新訊息</h6>
+                    <h6>傳送意見回饋</h6>
+                </div>
+                <div class="help">
+                    <h6>取得協助</h6>
+                    <li class="d-none d-sm-block">訂單狀態</li>
+                    <li class="d-none d-sm-block">出貨與寄送</li>
+                    <li class="d-none d-sm-block">退貨</li>
+                    <li class="d-none d-sm-block">付款選項</li>
+                    <li class="d-none d-sm-block">聯絡我們</li>
+                </div>
+                <div class="aboutnike">
+                    <h6>關於NIKE</h6>
+                    <li class="d-none d-sm-block">最新消息</li>
+                    <li class="d-none d-sm-block">職涯發展</li>
+                    <li class="d-none d-sm-block">投資者</li>
+                    <li class="d-none d-sm-block">環境永續性</li>
+                </div>
+                <!-- socialmedia -->
+                <div class="socialmedia">
+                    <div class="tt">
+                        <svg class="icon icon-twitter">
+                            <use xlink:href="symbol-defs.svg#icon-twitter"></use>
+                        </svg>
+                    </div>
+                    <div class="fb">
+                        <svg class="icon icon-facebook">
+                            <use xlink:href="symbol-defs.svg#icon-facebook"></use>
+                        </svg>
+                    </div>
+                    <div class="yt">
+                        <svg class="icon icon-youtube">
+                            <use xlink:href="symbol-defs.svg#icon-youtube"></use>
+                        </svg>
+                    </div>
+                    <div class="ig">
+                        <svg class="icon icon-instagram">
+                            <use xlink:href="symbol-defs.svg#icon-instagram"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="bottom flex-column flex-sm-row">
+                <div class="bottom-left">
+                    <div class="copyright">
+                        <p class="taiwan"><i class="fas fa-map-marker-alt"></i>&emsp;台灣</p>
+                        <p class="copyright">© 2021 Nike, Inc. All Rights Reserved</p>
+                    </div>
+                </div>
+                <div class="bottom-right">
+                    <li>指南</li>
+                    <li>銷售條款</li>
+                    <li>使用條款</li>
+                    <li>Nike隱私權政策</li>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
